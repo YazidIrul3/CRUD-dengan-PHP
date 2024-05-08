@@ -31,7 +31,7 @@ if(isset($_POST['create'])) {
 
 <div>
     <header>
-        <h3>Formulir Pendaftaran Siswa Baru</h3>
+        <h3>New News</h3>
     </header>
     
 
