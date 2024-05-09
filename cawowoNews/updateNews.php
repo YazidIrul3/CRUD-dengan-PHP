@@ -54,6 +54,14 @@ if(isset($_POST['update'])) {
                 </p>
 
                 <p>
+                    <select name="category">
+                        <option>Olahraga</option>
+                        <option>Tekonologi</option>
+                        <option>Politik</option>
+                    </select>
+                </p>
+
+                <p>
                     <input type="submit" value="update" name="update" />
                 </p>
 

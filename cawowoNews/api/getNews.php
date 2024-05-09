@@ -13,6 +13,7 @@ function select($query) {
             'title' => $data["title"],
             'description' => $data["description"],
             'image' => $data["image"],
+            'category' => $data["category"],
         );
         $response = array(
             'status' => 'ok',

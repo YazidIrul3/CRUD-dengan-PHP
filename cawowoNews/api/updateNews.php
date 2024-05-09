@@ -9,8 +9,9 @@ function update_news($post, $id_news) {
     $title = $post['title'];
     $description = $post['description'];
     $image = $post['image'];
+    $categoty = $post['category'];
     
-    $query = "UPDATE news SET title = '$title', description = '$description', image = '$image' WHERE id=$id_news";
+    $query = "UPDATE news SET title = '$title', description = '$description', image = '$image', category = '$category' WHERE id=$id_news";
     mysqli_query($connect, $query);
     
    return mysqli_affected_rows($connect);

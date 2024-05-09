@@ -23,39 +23,43 @@ if(isset($_POST['create'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulir Pendaftaran Siswa Baru | SMK Coding</title>
+    <title>Form Create News</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-<div>
-    <header>
-        <h3>New News</h3>
-    </header>
-    
+<div class="w-screen h-screen flex justify-center mx-auto">
+         <form method="POST" enctype="multipart/form-data" class="flex flex-col items-center w-7/12 ">
+            <h1 class="font-bold text-xl">Form Create New News</h1>
 
-         <form method="POST">
-
-            <fieldset>
-
-                <p>
-                    <label for="title">title: </label>
-                    <input type="text" name="title" placeholder="title lengkap" />
-                </p>
-                <p>
-                    <label for="description">description: </label>
-                    <textarea name="description"></textarea>
-                </p>
-            
-                <p>
-                    <label for="image">Image: </label>
-                    <input type="text" name="image" placeholder=""/>
-                </p>
-
-                <p>
-                    <input type="submit" value="create" name="create" />
-                </p>
+            <fieldset class="w-full flex justify-center flex-col mx-auto ">
+                <div class="flex flex-col">
+                    <label for="title">Title: </label>
+                    <input type="text" name="title" placeholder="title lengkap" class="w-full bg-slate-100 p-2" require/>
+                </div>
+                <div class="flex flex-col my-2">
+                    <label for="description">Description: </label>
+                    <textarea name="description" class="w-full h-44 bg-slate-100 p-2" require></textarea>
+                </div>
+                
+                <div class="flex flex-col">
+                    <label for="image">Image:</label>
+                    <input type="text" name="image" class="w-full bg-slate-100 p-2" require/>
+                </div>
+                
+                <div class="my-2">
+                    <label>Category:</label>
+                <select name="category" class="w-full bg-slate-100 p-2">
+                        <option>Olahraga</option>
+                        <option>Tekonologi</option>
+                        <option>Politik</option>
+                </select>
+                </div>
+                    
+                    <div class="bg-blue-950 px-4 py-2 w-20 text-white flex justify-center items-center hover:cursor-pointer bg-blue-700">
+                        <input type="submit" value="create" name="create" />
+                    </div>
 
             </fieldset>
 
