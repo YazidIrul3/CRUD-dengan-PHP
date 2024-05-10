@@ -35,27 +35,22 @@
         </div> 
     </div>
 
-<div class='flex justify-center items-center h-full mt-2 p-2'>
-<div class='grid gap-4 place-content-center place-items-center grid-cols-4 w-11/12 '>
+<div class='flex justify-center items-center h-full mt-4'>
+<div class='grid gap-3 place-content-center place-items-center xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 w-11/12 '>
     <?php
         foreach ($data_news['items'] as $value) {?>
-    <a href="#" class="flex flex-col w-80 hover:text-blue-100">
-        <div>
+        <a href="detailNews.php?id_news=<?php echo $value['id']?>" class="flex flex-col w-full h-44 font-bold hover:text-blue-600">
             <img src=<?php echo $value['image']?>  alt='card-pic' class="rounded-lg"/>
-        </div>
-        <div>
-            <h1 class='text-slate-950 font-bold'><?php echo $value['title']?></h1>
-        </div>
-        <div>
-            <h1><?php echo $value['description']?></h1>
-        </div>
-
+            <h1 class="text-slate-950 uppercase hover:underline underline-offset-1 "><?php echo $value['title']?></h1>
         </a>
     <?php
 }
 ?>
 </div>
 </div>
+<footer class="bg-blue-950 flex text-orange-100 justify-center items-center" >
+    
+</footer>
 </div>
 </body>
 </html>
