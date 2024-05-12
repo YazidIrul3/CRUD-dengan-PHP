@@ -37,6 +37,7 @@ if(isset($_POST['update'])) {
             <a class="mx-3" href="#">Pendidikan</a>
         </div>
     </nav>
+
     <div class="text-blue-950 font-semibold bg-orange-100 py-1.5 text-2xl w-screen ">
         <div class='flex flex-col'>
             <h3>BREAKING</h3>
@@ -44,17 +45,17 @@ if(isset($_POST['update'])) {
         </div> 
     </div>
 
-    <div class='flex flex-col justify-center items-center h-full mt-2 p-2 xl:w-8/12 lg:w-8/12 sm:w-11/12 w-full'>
-        <div class="mx-auto flex flex-col justify-center"> 
+    <div class='flex flex-col justify-center items-center h-full mt-2 p-2 w-11/12'>
+        <div class="mx-auto flex flex-col justify-center w-11/12"> 
             <div class="mb-3">   
                 <h1 class="font-bold text-4xl uppercase"><?php foreach($data_news['items'] as $news) {echo $news['title'];}?></h1>
             </div>
+            <div class="">
                 <img class="w-full rounded-lg" src=<?php foreach($data_news['items'] as $news) {echo $news['image'];}?>  alt='card-pic' class="rounded-lg"/>
-           
-                <p><?php foreach($data_news['items'] as $news) {echo $news['description'];}?></p>
+            </div>
+                <p class="text-pretty"><?php foreach($data_news['items'] as $news) {echo $news['description'];}?></p>
         </div>
     </div>
 </div>
 </body>
 </html>
-

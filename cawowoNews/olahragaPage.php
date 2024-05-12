@@ -6,7 +6,7 @@
     // var_dump($data);
 
     include "./api/getNews.php";
-    $data_news = select("SELECT * FROM news LIMIT 6");
+    $data_news = select("SELECT category * FROM news WHERE category='Olahraga'");
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
     <nav class="flex justify-between items-center bg-blue-950 py-3 text-slate-50 w-full" id='navbar'>
         <img src="logo.png" class="w-16 ml-10"/>
         <div class="font-semibold mx-10">
-            <a class="mx-3" href="olahragaPage.php?category_news=Olahraga" id="olahrage-page">Olahraga</a>
+            <a class="mx-3" href="#">Olahraga</a>
             <a class="mx-3" href="#">Politik</a>
             <a class="mx-3" href="#">Teknologi</a>
             <a class="mx-3" href="#">Pendidikan</a>

@@ -10,12 +10,12 @@ $data_news = select("SELECT * FROM news WHERE id=$id_news");
 if(isset($_POST['update'])) { 
         if(update_news($_POST, $id_news) > 0 ) {
         echo "<script>
-        alert('Data deleted success');
+        alert('Data updated success');
         document.location.href = 'admin.php';
         </script>";
     } else {
         echo "<script>
-        alert('Data deleted failed');
+        alert('Data updated failed');
         document.location.href = 'admin.php';
         </script>";
     }

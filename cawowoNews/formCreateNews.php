@@ -43,7 +43,7 @@ if(isset($_POST['create'])) {
                     <textarea name="description" class="w-full h-44 bg-slate-100 p-2" require></textarea>
                 </div>
                 
-                <div class="flex flex-col">
+                <div class="flex flex-col text-wrap">
                     <label for="image">Image:</label>
                     <input type="text" name="image" class="w-full bg-slate-100 p-2" require/>
                 </div>
@@ -54,6 +54,7 @@ if(isset($_POST['create'])) {
                         <option>Olahraga</option>
                         <option>Tekonologi</option>
                         <option>Politik</option>
+                        <option>Pendidikan</option>
                 </select>
                 </div>
                     
