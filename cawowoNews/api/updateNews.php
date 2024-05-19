@@ -1,6 +1,6 @@
 <?php
 
-include("connectTodb.php");
+include('../db/connectTodb.php');
 
 // cek apakah tombol daftar sudah diklik atau blum?
 function update_news($post, $id_news) {

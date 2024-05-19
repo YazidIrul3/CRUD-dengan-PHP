@@ -1,6 +1,6 @@
 <?php
 
-include "connectTodb.php";
+include('../db/connectTodb.php');
 
 function delete_news($id_news) {
     global $connect;

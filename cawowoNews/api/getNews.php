@@ -1,8 +1,7 @@
 <?php 
-include "connectTodb.php";
+include('../db/connectTodb.php');
 
 function select($query) {
-
     global $connect;
 
     $result =mysqli_query($connect,$query);
