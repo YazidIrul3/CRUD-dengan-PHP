@@ -84,7 +84,7 @@
                       <a href="detailNews.php?id_news=<?php echo $value['id']?>"
                         class="flex flex-row w-full items-center h-44 font-bold mb-3 ">
 
-                        <div class="w-1/4 h-44">
+                        <div class="w-4/12 h-44">
                             <img src="../img/<?php echo $value['image']?>"  
                             alt='card-pic' 
                             class="rounded-lg w-full h-full object-cover"/>
@@ -131,8 +131,8 @@
         </div>
     </div>
 
-    <div>
-        <div class="flex flex-row justify-center items-center gap-4 p-4 overflow-x-scroll mt-4 w-[1600px]">
+    <div class="overflow-x-scroll">
+        <div class="flex flex-row justify-center items-center gap-4 p-4 mt-4 w-[1600px]">
             <?php
                 foreach ($news['items'] as $value) {?>
                 <a href="detailNews.php?id_news=<?php echo $value['id']?>"
