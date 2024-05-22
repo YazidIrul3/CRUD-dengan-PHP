@@ -10,7 +10,7 @@
     $sport_news = select("SELECT * FROM news WHERE category='Olahraga' ORDER BY id DESC LIMIT 4");
     $politik_news = select("SELECT * FROM news WHERE category='politik' ORDER BY id DESC LIMIT 5");
     $teknologi_news = select("SELECT * FROM news WHERE category='teknologi' ORDER BY id DESC LIMIT 5");
-    $pendidikan_news = select("SELECT * FROM news WHERE category='pendidikan' ORDER BY id DESC LIMIT 5");
+    $pendidikan_news = select("SELECT * FROM news WHERE category='pendidikan' ORDER BY id DESC LIMIT 4");
 ?>
 
 <!DOCTYPE html>
