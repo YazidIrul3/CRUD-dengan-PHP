@@ -135,7 +135,7 @@
     <div class="overflow-x-scroll">
         <div class="flex flex-row justify-center items-center gap-4 p-4 mt-4 w-[1600px]">
             <?php
-                foreach ($news['items'] as $value) {?>
+                foreach ($teknologi_news['items'] as $value) {?>
                 <a href="detailNews.php?id_news=<?php echo $value['id']?>"
                 class="h-64 w-80">
 
@@ -164,7 +164,7 @@
             </div>
             <div class="flex flex-col">
                 <?php
-                    foreach ($sport_news['items'] as $value) {?>
+                    foreach ($pendidikan_news['items'] as $value) {?>
                     <a href="detailNews.php?id_news=<?php echo $value['id']?>"
                     class="flex flex-row w-full items-center h-44 font-bold mb-3 ">
 
