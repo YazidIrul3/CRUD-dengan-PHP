@@ -6,9 +6,11 @@
     // var_dump($data);
 
     include '../api/getNews.php';
-    $data_news = select("SELECT * FROM news LIMIT 6");
-    $news = select("SELECT * FROM news WHERE category='Olahraga' LIMIT 6");
-    $sport_news = select("SELECT * FROM news WHERE category='Olahraga' LIMIT 4");
+    $data_news = select("SELECT * FROM news ORDER BY id DESC LIMIT 6");
+    $sport_news = select("SELECT * FROM news WHERE category='Olahraga' ORDER BY id DESC LIMIT 4");
+    $politik_news = select("SELECT * FROM news WHERE category='politik' ORDER BY id DESC LIMIT 5");
+    $teknologi_news = select("SELECT * FROM news WHERE category='teknologi' ORDER BY id DESC LIMIT 5");
+    $pendidikan_news = select("SELECT * FROM news WHERE category='pendidikan' ORDER BY id DESC LIMIT 5");
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User POV</title>
-
     <!-- tailwind start -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind end -->
@@ -57,14 +58,14 @@
             <div class='grid gap-6 w-11/12 place-content-center xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2'>
                 <?php
                     foreach ($data_news['items'] as $value) {?>
-                    <a href="detailNews.php?id_news=<?php echo $value['id']?>" class="my-4 flex flex-col w-full h-44 font-bold hover:text-blue-600">
+                    <a href="detailNews.php?id_news=<?php echo $value['id']?>" class="my-4 flex flex-col w-full h-full font-bold hover:text-blue-600">
                         <div class="flex flex-col">
-                            <img src="../img/<?php echo $value['image']?>"  alt='card-pic' class="rounded-lg w-full h-32 object-cover "/>
+                            <img src="../img/<?php echo $value['image']?>"  alt='card-pic' class="rounded-lg w-full h-44 object-cover "/>
                             <h1 class="text-slate-950 text-xs uppercase hover:underline "><?php echo $value['title']?></h1>
                         </div>    
                         
                     </a>
-                        <!-- <div>
+                        <!-- <div> 
                     </div> -->
                 <?php
             }
@@ -76,7 +77,7 @@
     <div class="bg-fixed flex m-2 xl:flex-row lg:flex-row sm:flex-row flex-col justify-evenly w-11/12 mt-4 h-full">
         <div class="flex flex-col">
             <div class="text-xl font-bold mt-3">
-                <h1>Berita Politik</h1>
+                <h1>Berita Olahraga</h1>
             </div>
             <div class="flex flex-col">
                 <?php
@@ -106,7 +107,7 @@
 
         <div class="flex mt-10 xl:w-6/12 lg:w-6/12 sm:w-6/12 w-full h-full flex-col ">
             <?php
-                foreach ($data_news['items'] as $value) {?>
+                foreach ($politik_news['items'] as $value) {?>
                 <a href="detailNews.php?id_news=<?php echo $value['id']?>"
                     class="flex xl:flex-row lg:flex-row sm:flex-row flex-col 
                     items-center w-80 h-full p-2 font-bold">

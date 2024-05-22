@@ -23,6 +23,7 @@ if(isset($_POST['create'])) {
 <head>
     <title>Form Create News</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-" href="../img/logo.png">
     <style>
         #logo {
             opacity: 0;
@@ -79,6 +80,7 @@ if(isset($_POST['create'])) {
                                         <option>Olahraga</option>
                                         <option>Tekonologi</option>
                                         <option>Politik</option>
+                                        <option>Pendidikan</option>
                                 </select>
                         </div>
                             
