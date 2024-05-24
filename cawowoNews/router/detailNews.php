@@ -1,26 +1,13 @@
-<?php 
-include '../api/updateNews.php';
+<?php
+
 include '../api/getNews.php';
 
 $id_news = (int)$_GET['id_news'];
 
 $data_news = select("SELECT * FROM news WHERE id=$id_news");
-// $data_news['items'];
 
-if(isset($_POST['update'])) { 
-        if(update_news($_POST, $id_news) > 0 ) {
-        echo "<script>
-        alert('Data deleted success');
-        document.location.href = 'admin.php';
-        </script>";
-    } else {
-        echo "<script>
-        alert('Data deleted failed');
-        document.location.href = 'admin.php';
-        </script>";
-    }
-}
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Detail News Page</title>
@@ -50,15 +37,33 @@ if(isset($_POST['update'])) {
             </div> 
         </nav>
 
-    <div class='flex flex-col justify-center items-center h-full mt-2 p-2 xl:w-6/12 lg:w-6/12 sm:w-11/12 w-11/12'>
+    <div class='flex flex-col justify-center items-center h-full mt-2 p-2 
+    xl:w-6/12 lg:w-6/12 sm:w-11/12 w-11/12'>
+
         <div class="mx-auto flex flex-col justify-center w-11/12"> 
-            <div class="mb-5">   
-                <h1 class="font-bold xl:text-3xl lg:txt-xl sm:text-lg text-lg uppercase"><?php foreach($data_news['items'] as $news) {echo $news['title'];}?></h1>
+            <div class="text-slate-800 font-light mb-2">
+                <a href="user.php" class="hover:font-semibold">Home</a>
+
+                <span class="mx-2"> > </span>
+
+                <a href="<?php foreach($data_news['items'] as $news) {echo $news['category'];}?>.php"
+                    class="hover:font-semibold">
+                    <?php foreach($data_news['items'] as $news) {echo $news['category'];}?>
+                </a>
             </div>
+
+            <div class="mb-5">   
+                <h1 class="font-bold xl:text-3xl lg:txt-xl sm:text-xl text-lg uppercase">
+                    <?php foreach($data_news['items'] as $news) {echo $news['title'];}?>
+                </h1>
+            </div>
+
             <div class="">
                 <img src="../img/<?php echo $news['image']?>"  alt='card-pic' class="rounded-lg w-full"/>
             </div>
-                <p class="mt-5 text-pretty text-lg"><?php foreach($data_news['items'] as $news) {echo $news['description'];}?></p>
+                <p class="mt-5 text-pretty xl:text-lg lg:text-lg sm:text-lg text-sm">
+                    <?php foreach($data_news['items'] as $news) {echo  $news['description'];}?>
+                </p>
         </div>
     </div>
 </div>

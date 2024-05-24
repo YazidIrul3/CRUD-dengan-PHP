@@ -25,10 +25,10 @@
               <img src="../logo/logo.png" class="w-20 ml-10 m-3"/>
             </a>
             <div class="font-semibold mx-5 " id="navbar-menu">
-                <a class="mx-3" href="olahraga.php" id="olahraga-page">Olahraga</a>
-                <a class="mx-3" href="politik.php">Politik</a>
-                <a class="mx-3" href="teknologi.php">Teknologi</a>
-                <a class="mx-3" href="pendidikan.php">Pendidikan</a>
+                <a class="mx-3" href="Olahraga.php" id="olahraga-page">Olahraga</a>
+                <a class="mx-3" href="Politik.php">Politik</a>
+                <a class="mx-3" href="Teknologi.php">Teknologi</a>
+                <a class="mx-3" href="Pendidikan.php">Pendidikan</a>
             </div>
         </nav>
 
@@ -125,10 +125,10 @@
             </div>
             
             <div class="flex flex-col">
-                <a class="mx-3" href="olahraga.php" id="olahraga-page">Olahraga</a>
-                <a class="mx-3" href="politik.php">Politik</a>
-                <a class="mx-3" href="teknologi.php">Teknologi</a>
-                <a class="mx-3" href="pendidikan.php">Pendidikan</a>
+                <a class="mx-3" href="Olahraga.php" id="olahraga-page">Olahraga</a>
+                <a class="mx-3" href="Politik.php">Politik</a>
+                <a class="mx-3" href="Teknologi.php">Teknologi</a>
+                <a class="mx-3" href="Pendidikan.php">Pendidikan</a>
             </div>    
         </div>
         

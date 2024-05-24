@@ -34,10 +34,10 @@
               <img src="../logo/logo.png" class="w-20 ml-10 m-3"/>
             </a>
             <div class="font-semibold mx-5 " id="navbar-menu">
-                <a class="mx-3" href="olahraga.php" id="olahraga-page">Olahraga</a>
-                <a class="mx-3" href="politik.php">Politik</a>
-                <a class="mx-3" href="teknologi.php">Teknologi</a>
-                <a class="mx-3" href="pendidikan.php">Pendidikan</a>
+                <a class="mx-3" href="Olahraga.php" id="olahraga-page">Olahraga</a>
+                <a class="mx-3" href="Politik.php">Politik</a>
+                <a class="mx-3" href="Teknologi.php">Teknologi</a>
+                <a class="mx-3" href="Pendidikan.php">Pendidikan</a>
             </div>
 
             <!-- <div class="mr-2 text-xl xl:hidden lg:hidden flex" id="hamburger-menu">
@@ -59,7 +59,7 @@
                     <h1>Berita Terbaru</h1>
                 </div>
 
-                <div class="bg-blue-950 h-2 w-20 mt-1    rounded-xl">
+                <div class="bg-blue-950 h-2 w-20 mt-1 rounded-xl">
                     <span class=""></span>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     foreach ($data_news['items'] as $value) {?>
                     <a href="detailNews.php?id_news=<?php echo $value['id']?>" class="my-4 flex flex-col w-full h-full font-bold hover:text-blue-600">
                         <div class="flex flex-col">
-                            <img src="../img/<?php echo $value['image']?>"  alt='card-pic' class="rounded-lg w-full h-44 object-cover "/>
+                            <img src="../img/<?php echo $value['image']?>"  alt='card-pic' class="rounded w-full h-44 object-cover "/>
                             <h1 class="text-slate-950 text-xs uppercase hover:underline "><?php echo $value['title']?></h1>
                         </div>    
                         
@@ -154,6 +154,18 @@
     </div>
 
     <div class="overflow-x-scroll font-bold">
+        <div class="flex flex-col xl:w-8/12 lg:w-8/12 w-11/12 ">
+            <div class="xl:text-2xl lg:text-xl text-lg font-bold mt-3 ml-2">
+                <div>
+                    <h1>Berita Teknologi</h1>
+                </div>
+
+                <div class="bg-blue-950 h-2 w-20 mt-1 rounded-xl">
+                    <span class=""></span>
+                </div>
+            </div>
+        </div>
+        
         <div class="flex flex-row justify-center items-center gap-4 p-4 mt-4 w-[1600px]">
             <?php
                 foreach ($teknologi_news['items'] as $value) {?>
@@ -228,10 +240,10 @@
             </div>
             
             <div class="flex flex-col">
-                <a class="mx-3" href="olahraga.php" id="olahraga-page">Olahraga</a>
-                <a class="mx-3" href="politik.php">Politik</a>
-                <a class="mx-3" href="teknologi.php">Teknologi</a>
-                <a class="mx-3" href="pendidikan.php">Pendidikan</a>
+                <a class="mx-3" href="Olahraga.php" id="olahraga-page">Olahraga</a>
+                <a class="mx-3" href="Politik.php">Politik</a>
+                <a class="mx-3" href="Teknologi.php">Teknologi</a>
+                <a class="mx-3" href="Pendidikan.php">Pendidikan</a>
             </div>    
         </div>
         
