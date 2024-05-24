@@ -23,13 +23,14 @@ if(isset($_POST['update'])) {
 ?><!DOCTYPE html>
 <html>
 <head>
-    <title>Formulir Pendaftaran Siswa Baru | SMK Coding</title>
+    <title>Detail News Page</title>
+    <link rel="icon" type="image/x-" href="../logo/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <div class="flex justify-center items-center flex-col">
 <nav class="flex xl:flex-row lg:flex-row flex-col justify-between items-center bg-blue-950 py-3 text-slate-50 w-full" id="navbar">
-            <img src="../img/logo.png" class="w-16 ml-10"/>
+            <img src="../logo/logo.png" class="w-16 ml-10"/>
             <div class="font-semibold mx-10 " id="navbar-menu">
                 <a class="mx-3" href="olahraga.php" id="olahraga-page">Olahraga</a>
                 <a class="mx-3" href="politik.php">Politik</a>
@@ -49,15 +50,15 @@ if(isset($_POST['update'])) {
             </div> 
         </nav>
 
-    <div class='flex flex-col justify-center items-center h-full mt-2 p-2 w-11/12'>
+    <div class='flex flex-col justify-center items-center h-full mt-2 p-2 xl:w-6/12 lg:w-6/12 sm:w-11/12 w-11/12'>
         <div class="mx-auto flex flex-col justify-center w-11/12"> 
-            <div class="mb-3">   
+            <div class="mb-5">   
                 <h1 class="font-bold xl:text-3xl lg:txt-xl sm:text-lg text-lg uppercase"><?php foreach($data_news['items'] as $news) {echo $news['title'];}?></h1>
             </div>
             <div class="">
                 <img src="../img/<?php echo $news['image']?>"  alt='card-pic' class="rounded-lg w-full"/>
             </div>
-                <p class="text-pretty"><?php foreach($data_news['items'] as $news) {echo $news['description'];}?></p>
+                <p class="mt-5 text-pretty text-lg"><?php foreach($data_news['items'] as $news) {echo $news['description'];}?></p>
         </div>
     </div>
 </div>

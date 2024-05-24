@@ -25,8 +25,9 @@ if(isset($_POST['update'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Create News</title>
+    <title>Update Section- News</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-" href="../logo/logo.png">
     <style>
         #logo {
             opacity: 0;
@@ -52,11 +53,11 @@ if(isset($_POST['update'])) {
 
 <body>
 
-        <div class="relative w-screen h-screen h-14 flex justify-center mx-auto bg-slate-700">
+        <div class="relative w-screen h-full h-14 flex justify-center mx-auto bg-slate-700">
 
-            <form method="POST" enctype="multipart/form-data" class="flex flex-col items-center justify-center w-7/12" id="form">
+            <form method="POST" enctype="multipart/form-data" class="flex flex-col p-5 items-center justify-center w-9/12" id="form">
             
-                <div class="w-56 mb-3 bg-top"  id="logo">
+                <div class="w-56 mb-3 mt-2 bg-top"  id="logo">
                     <img src="../img/logo.png" alt="Logo">
                 </div>
 
@@ -71,18 +72,17 @@ if(isset($_POST['update'])) {
                             class="w-full shadow-xl p-2 rounded-xl" 
                             style="background-color:#5e5e5e;" 
                             require 
-                            value=<?php foreach($data_news['items'] as $news) {echo $news['title'];}?> />
+                            value="<?php foreach($data_news['items'] as $news) {echo $news['title'];}?>" />
                         </div>
 
                         <div class="form flex flex-col my-2">
                             <label for="description">Description: </label>
                             <textarea 
                             name="description" 
-                            class="w-full h-44 shadow-xl rounded-xl" 
+                            class="w-full h-64 shadow-xl rounded-xl p-2" 
                             style="background-color:#5e5e5e;" 
                             require
-                            >
-                                <?php foreach($data_news['items'] as $news) {echo $news['description'];}?>
+                            ><?php foreach($data_news['items'] as $news) {echo $news['description'];}?>
                             </textarea>
                         </div>
                         
@@ -94,7 +94,6 @@ if(isset($_POST['update'])) {
                             class="w-full shadow-xl p-2 rounded-xl" 
                             style="background-color:#5e5e5e;" 
                             require
-                            value=<?php foreach($data_news['items'] as $news) {echo $news['image'];}?>
                             />
                         </div>
                         
@@ -108,6 +107,7 @@ if(isset($_POST['update'])) {
                                         <option>Olahraga</option>
                                         <option>Tekonologi</option>
                                         <option>Politik</option>
+                                        <option>Pendidikan</option>
                                 </select>
                         </div>
                             

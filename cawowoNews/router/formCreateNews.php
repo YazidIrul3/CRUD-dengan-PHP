@@ -5,12 +5,12 @@ if(isset($_POST['create'])) {
     if(post_news($_POST) > 0) {
         echo "<script>
             alert('Data created success');
-            document.location.href = 'formCreateNews.php';
+            document.location.href = 'admin.php';
         </script>";
 } else {
     echo "<script>
     alert('Data created failed');
-    document.location.href = 'formCreateNews.php';
+    document.location.href = 'admin.php';
     </script>";
     }
 }
@@ -21,9 +21,9 @@ if(isset($_POST['create'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Create News</title>
+    <title>Form Create News Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-" href="../img/logo.png">
+    <link rel="icon" type="image/x-" href="../logo/logo.png">
     <style>
         #logo {
             opacity: 0;
@@ -51,10 +51,10 @@ if(isset($_POST['create'])) {
 
         <div class="relative w-screen h-screen h-14 flex justify-center mx-auto bg-slate-700">
 
-            <form method="POST" enctype="multipart/form-data" class="flex flex-col items-center justify-center w-7/12" id="form">
+            <form method="POST" enctype="multipart/form-data" class="flex flex-col p-5 items-center justify-center w-9/12" id="form">
             
-                <div class="w-56 mb-3 bg-top"  id="logo">
-                    <img src="../img/logo.png" alt="Logo">
+                <div class="w-56 mt-2 mb-3 bg-top"  id="logo">
+                    <img src="../logo/logo.png" alt="Logo">
                 </div>
 
                 <fieldset class="w-full flex justify-center flex-col mx-auto ">
@@ -66,7 +66,7 @@ if(isset($_POST['create'])) {
 
                         <div class="form flex flex-col my-2">
                             <label for="description">Description: </label>
-                            <textarea name="description" class="w-full h-44 shadow-xl rounded-xl" style="background-color:#5e5e5e;" require></textarea>
+                            <textarea name="description" class="w-full p-2 h-64 shadow-xl rounded-xl" style="background-color:#5e5e5e;" require></textarea>
                         </div>
                         
                         <div class="form flex flex-col">
@@ -78,7 +78,7 @@ if(isset($_POST['create'])) {
                             <label>Category:</label>
                                 <select name="category" class="w-full shadow-xl p-2 rounded-xl" style="background-color:#5e5e5e;">
                                         <option>Olahraga</option>
-                                        <option>Tekonologi</option>
+                                        <option>Teknologi</option>
                                         <option>Politik</option>
                                         <option>Pendidikan</option>
                                 </select>
