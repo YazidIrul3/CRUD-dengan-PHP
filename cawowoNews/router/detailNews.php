@@ -39,8 +39,7 @@ $data_news = select("SELECT * FROM news WHERE id=$id_news");
 
     <div class='flex flex-col justify-center items-center h-full mt-2 p-2 
     xl:w-6/12 lg:w-6/12 sm:w-11/12 w-11/12'>
-
-        <div class="mx-auto flex flex-col justify-center w-11/12"> 
+f        <div class="mx-auto flex flex-col justify-center w-11/12"> 
             <div class="text-slate-800 font-light mb-2">
                 <a href="user.php" class="hover:font-semibold">Home</a>
 

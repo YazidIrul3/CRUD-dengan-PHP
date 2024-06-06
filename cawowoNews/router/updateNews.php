@@ -53,12 +53,12 @@ if(isset($_POST['update'])) {
 
 <body>
 
-        <div class="relative w-screen h-full h-14 flex justify-center mx-auto bg-slate-700">
+        <div class="relative w-screen h-screen h-14 flex justify-center mx-auto bg-slate-700">
 
             <form method="POST" enctype="multipart/form-data" class="flex flex-col p-5 items-center justify-center w-9/12" id="form">
             
                 <div class="w-56 mb-3 mt-2 bg-top"  id="logo">
-                    <img src="../img/logo.png" alt="Logo">
+                    <img src="../logo/logo.png" alt="Logo">
                 </div>
 
                 <fieldset class="w-full flex justify-center flex-col mx-auto ">
@@ -91,6 +91,7 @@ if(isset($_POST['update'])) {
                             <input 
                             type="text"
                             name="image" 
+                            value=<?php foreach($data_news['items'] as $news) {echo $news['image'];}?>
                             class="w-full shadow-xl p-2 rounded-xl" 
                             style="background-color:#5e5e5e;" 
                             require
@@ -105,7 +106,7 @@ if(isset($_POST['update'])) {
                                 value=<?php foreach($data_news['items'] as $news) {echo $news['category'];}?>
                                 >
                                         <option>Olahraga</option>
-                                        <option>Tekonologi</option>
+                                        <option>Teknologi</option>
                                         <option>Politik</option>
                                         <option>Pendidikan</option>
                                 </select>
@@ -122,5 +123,3 @@ if(isset($_POST['update'])) {
         <script src="../js/jquery-3.7.1.min.js"></script>
         <script src="../js/parallax.js"></script>
     </body>
-</html>
-
